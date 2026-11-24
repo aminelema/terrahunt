@@ -21,10 +21,18 @@ import { PrismaService } from '../../prisma/prisma.module';
 export class GeodleService {
   constructor(@Inject(PrismaService) private readonly prisma: PrismaService) {}
 
-  /** Returns today's midnight timestamp in UTC (e.g. 2026-11-24T00:00:00.000Z). */
-  private getTodayUtcDate(): Date {
-    const now = new Date();
-    return new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
+  /**
+   * Returns today's calendar date in German time (Europe/Berlin, CET/CEST)
+   * so the Daily puzzle rotates strictly at 00:00 German time.
+   */
+  private getTodayBerlinDate(): Date {
+    const berlinDateStr = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Europe/Berlin',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).format(new Date()); // "YYYY-MM-DD"
+    return new Date(`${berlinDateStr}T00:00:00.000Z`);
   }
 
   private toCountryAttributes(country: Country): CountryAttributes {
@@ -67,10 +75,10 @@ export class GeodleService {
    * avoiding any secret country used in the last 90 days.
    */
   private async getOrCreateTodayDailyChallenge() {
-    const todayUtc = this.getTodayUtcDate();
+    const todayBerlin = this.getTodayBerlinDate();
 
     const existing = await this.prisma.dailyChallenge.findUnique({
-      where: { challengeDate: todayUtc },
+      where: { challengeDate: todayBerlin },
     });
     if (existing) return existing;
 
@@ -91,7 +99,7 @@ export class GeodleService {
       return await this.prisma.dailyChallenge.create({
         data: {
           challengeNumber: nextNumber,
-          challengeDate: todayUtc,
+          challengeDate: todayBerlin,
           secretCountryIso2,
         },
       });
@@ -99,7 +107,7 @@ export class GeodleService {
       // Handle simultaneous midnight requests gracefully
       if (err instanceof Prisma.PrismaClientKnownRequestError && err.code === 'P2002') {
         const raced = await this.prisma.dailyChallenge.findUnique({
-          where: { challengeDate: todayUtc },
+          where: { challengeDate: todayBerlin },
         });
         if (raced) return raced;
       }

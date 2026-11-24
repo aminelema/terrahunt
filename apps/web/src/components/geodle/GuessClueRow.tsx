@@ -4,6 +4,7 @@ import type {
   GeodleGuessRow,
   NumericTrend,
 } from '@terrahunt/shared';
+import { CountryFlag } from './CountryFlag';
 
 function getCellColorClasses(status: ClueStatus): string {
   if (status === 'MATCH') {
@@ -30,6 +31,8 @@ export function formatCompactPopulation(pop: number): string {
 
 export function formatCompactArea(km2: number): string {
   if (km2 >= 1_000_000) return `${(km2 / 1_000_000).toFixed(2)}M km²`;
+  if (km2 >= 10_000) return `${Math.round(km2 / 1_000)}K km²`;
+  if (km2 < 10) return `${km2.toFixed(2)} km²`;
   return `${Math.round(km2).toLocaleString('en-US')} km²`;
 }
 
@@ -46,121 +49,107 @@ const DIRECTION_ARROWS: Record<Direction8, string> = {
 
 interface GuessClueRowProps {
   guess: GeodleGuessRow;
+  /** Optional custom subtitle under the country name (e.g. "Answer" for the revealed row). */
+  subtitleLabel?: string;
 }
 
 /**
- * Renders 1 guessed country row with its country card + 6 color-coded attribute cells.
+ * Renders 1 country row in the 7-column Geodle grid (used for both guesses and the all-green answer row).
  */
-export function GuessClueRow({ guess }: GuessClueRowProps) {
+export function GuessClueRow({ guess, subtitleLabel }: GuessClueRowProps) {
   const { clues } = guess;
 
-  const neighborLabel = guess.isCorrect
-    ? 'Target!'
+  const neighborText = guess.isCorrect
+    ? '✓ Target'
     : clues.neighborOrDirection.isNeighbor
-      ? 'Yes (Borders!)'
-      : `No · ${DIRECTION_ARROWS[clues.neighborOrDirection.direction ?? 'N']}`;
+      ? 'Borders!'
+      : DIRECTION_ARROWS[clues.neighborOrDirection.direction ?? 'N'];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-7 gap-2 p-2.5 sm:p-0 rounded-xl bg-navy-900/60 sm:bg-transparent border border-slate-800 sm:border-none">
-      {/* Country Name Badge */}
-      <div className="col-span-2 sm:col-span-1 px-3 py-2.5 rounded-xl bg-navy-800 border border-slate-700 flex items-center gap-2 min-h-[58px]">
-        <span className="text-lg shrink-0">{guess.flagEmoji}</span>
+    <div className="grid grid-cols-2 sm:grid-cols-7 gap-2 p-2 sm:p-0 rounded-xl bg-navy-900/60 sm:bg-transparent border border-slate-800 sm:border-none">
+      {/* Country Flag + Name */}
+      <div
+        className={`col-span-2 sm:col-span-1 px-3 py-2 rounded-xl border flex items-center gap-2.5 min-h-[52px] ${
+          guess.isCorrect
+            ? 'bg-emerald-700/80 border-emerald-400 text-white'
+            : 'bg-navy-800 border-slate-700'
+        }`}
+      >
+        <CountryFlag iso2={guess.countryIso2} />
         <div className="min-w-0">
           <div className="text-xs font-bold text-white truncate" title={guess.countryName}>
             {guess.countryName}
           </div>
-          <div className="text-[10px] font-mono text-slate-400">#{guess.guessOrder}</div>
+          <div className="text-[10px] font-mono text-slate-300/80">
+            {subtitleLabel ?? `#${guess.guessOrder}`}
+          </div>
         </div>
       </div>
 
-      {/* 1. Continent & Subregion */}
+      {/* 1. Continent */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex flex-col items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.continent.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Continent</span>
         <span className="text-xs font-bold leading-tight">{clues.continent.region}</span>
-        <span className="text-[10px] opacity-85 leading-tight truncate max-w-full">
+        <span className="text-[10px] opacity-85 truncate max-w-full">
           {clues.continent.subregion}
         </span>
       </div>
 
       {/* 2. Population */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.population.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Population</span>
         <span className="text-xs sm:text-sm font-mono font-extrabold">
           {formatCompactPopulation(clues.population.value)}{' '}
           {getTrendArrow(clues.population.trend)}
         </span>
-        {clues.population.trend !== 'EQUAL' && (
-          <span className="text-[10px] opacity-85">
-            {clues.population.trend === 'HIGHER' ? 'Higher ↑' : 'Lower ↓'}
-          </span>
-        )}
       </div>
 
-      {/* 3. Area km² */}
+      {/* 3. Area */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.areaKm2.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Area</span>
         <span className="text-xs font-mono font-extrabold">
           {formatCompactArea(clues.areaKm2.value)} {getTrendArrow(clues.areaKm2.trend)}
         </span>
-        {clues.areaKm2.trend !== 'EQUAL' && (
-          <span className="text-[10px] opacity-85">
-            {clues.areaKm2.trend === 'HIGHER' ? 'Bigger ↑' : 'Smaller ↓'}
-          </span>
-        )}
       </div>
 
-      {/* 4. Landlocked (Binnenstaat) */}
+      {/* 4. Landlocked */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.landlocked.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Landlocked</span>
         <span className="text-xs sm:text-sm font-extrabold">
           {clues.landlocked.value ? 'Yes' : 'No'}
         </span>
-        <span className="text-[10px] opacity-85">
-          {clues.landlocked.value ? 'Binnenstaat' : 'Has Coast'}
-        </span>
       </div>
 
-      {/* 5. Average Temperature °C */}
+      {/* 5. Avg Temp */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.avgTempC.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Avg Temp</span>
         <span className="text-xs sm:text-sm font-mono font-extrabold">
           {clues.avgTempC.value.toFixed(1)}°C {getTrendArrow(clues.avgTempC.trend)}
         </span>
-        {clues.avgTempC.trend !== 'EQUAL' && (
-          <span className="text-[10px] opacity-85">
-            {clues.avgTempC.trend === 'HIGHER' ? 'Warmer ↑' : 'Cooler ↓'}
-          </span>
-        )}
       </div>
 
-      {/* 6. Neighbor / Compass Direction */}
+      {/* 6. Neighbor / Compass */}
       <div
-        className={`px-2.5 py-2 rounded-xl border flex flex-col items-center justify-center text-center min-h-[58px] ${getCellColorClasses(
+        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
           clues.neighborOrDirection.status,
         )}`}
       >
-        <span className="text-[10px] uppercase opacity-75 sm:hidden">Neighbor</span>
-        <span className="text-xs font-extrabold leading-tight">{neighborLabel}</span>
+        <span className="text-xs font-extrabold">{neighborText}</span>
       </div>
     </div>
   );

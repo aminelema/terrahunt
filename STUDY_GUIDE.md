@@ -29,8 +29,25 @@ terrahunt/
     ├── hooks/useGeodleGame.ts          # 12. Custom hook holding game state & API calls
     ├── pages/GeodlePage.tsx            # 13. Clean declarative page layout
     └── components/geodle/
-        ├── CountryAutocomplete.tsx     # 14. Searchable EN/DE dropdown (↑/↓/Enter)
-        └── GuessClueRow.tsx            # 15. Renders the 6 Green/Yellow/Red cells
+        ├── ClueSummaryBar.tsx          # 14. Math.min/max narrowed clues bar
+        ├── CountryAutocomplete.tsx     # 15. Searchable EN/DE dropdown (↑/↓/Enter)
+        ├── CountryFlag.tsx             # 16. SVG flag image (fixes missing Windows flag emojis)
+        └── GuessClueRow.tsx            # 17. Renders the 6 Green/Yellow/Red cells
+
+---
+
+## 1.5 How to Reset Your Daily Game Yourself (For Testing & Interviews)
+
+Because Daily progress is tied to your `geodle_guest_id` cookie in `game_sessions`, you have **3 easy ways** to reset it anytime:
+
+1. **Fastest in Browser (3 seconds, zero terminal needed):**
+   Press `F12` → **Application** tab (Chrome/Edge) or **Storage** (Firefox) → **Cookies** → `http://localhost:5173` → select `geodle_guest_id` → press **Delete** → Refresh (`F5`). The backend immediately gives you a brand-new guest ID!
+2. **Visual Database GUI (Prisma Studio):**
+   In `/home/amine/projects/terrahunt/apps/api`, run `npx prisma studio`, open `http://localhost:5555`, click `GameSession`, and delete your row.
+3. **One-Line Terminal Reset (Deletes all played sessions, keeps all 197 countries):**
+   ```bash
+   docker exec -it terrahunt-postgres-dev psql -U terrahunt -d terrahunt -c "DELETE FROM game_sessions;"
+   ```
 ```
 
 ---

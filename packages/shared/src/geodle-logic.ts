@@ -2,7 +2,6 @@ import type {
   ClueStatus,
   CountryRegion,
   Direction8,
-  GameMode,
   NumericTrend,
 } from './enums';
 
@@ -197,43 +196,6 @@ export function evaluateGeodleGuess(
       neighborOrDirection,
     },
   };
-}
-
-function statusToEmoji(status: ClueStatus): string {
-  if (status === 'MATCH') return '🟩';
-  if (status === 'CLOSE') return '🟨';
-  return '🟥';
-}
-
-/** Builds a Wordle-style spoiler-free emoji summary for clipboard sharing. */
-export function formatGeodleShareText(params: {
-  mode: GameMode;
-  dailyChallengeNumber: number | null;
-  won: boolean;
-  guesses: Array<{ clues: EvaluatedGuessClues }>;
-}): string {
-  const title =
-    params.mode === 'DAILY' && params.dailyChallengeNumber
-      ? `Geodle #${params.dailyChallengeNumber}`
-      : 'Geodle (Free Play)';
-  const outcome = params.won ? `${params.guesses.length} tries` : 'X (Gave up)';
-
-  const grid = params.guesses
-    .map(({ clues }) =>
-      [
-        clues.continent.status,
-        clues.population.status,
-        clues.areaKm2.status,
-        clues.landlocked.status,
-        clues.avgTempC.status,
-        clues.neighborOrDirection.status,
-      ]
-        .map(statusToEmoji)
-        .join(''),
-    )
-    .join('\n');
-
-  return `${title} — ${outcome}\n${grid}`;
 }
 
 /**

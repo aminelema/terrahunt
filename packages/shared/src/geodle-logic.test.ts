@@ -2,7 +2,6 @@ import { describe, expect, it } from 'vitest';
 import {
   computeCompassDirection,
   evaluateGeodleGuess,
-  formatGeodleShareText,
   normalizeSearchText,
   type CountryAttributes,
 } from './geodle-logic';
@@ -104,19 +103,5 @@ describe('Geodle evaluation logic', () => {
     expect(normalizeSearchText('Österreich')).toBe('osterreich');
     expect(normalizeSearchText('Weißrussland')).toBe('weissrussland');
     expect(normalizeSearchText("Côte d'Ivoire")).toBe('cote divoire');
-  });
-
-  it('formats spoiler-free emoji share grid', () => {
-    const row1 = evaluateGeodleGuess(GERMANY, AUSTRIA, true);
-    const row2 = evaluateGeodleGuess(AUSTRIA, AUSTRIA, false);
-    const text = formatGeodleShareText({
-      mode: 'DAILY',
-      dailyChallengeNumber: 5,
-      won: true,
-      guesses: [row1, row2],
-    });
-    expect(text).toContain('Geodle #5 — 2 tries');
-    expect(text).toContain('🟨🟥🟥🟥🟨🟩');
-    expect(text).toContain('🟩🟩🟩🟩🟩🟩');
   });
 });
