@@ -21,10 +21,8 @@ export function configureApp(app: INestApplication): void {
 
   patchNestJsSwagger();
   const swaggerConfig = new DocumentBuilder()
-    .setTitle('TerraHunt Arcade API')
-    .setDescription(
-      'REST API for TerraHunt 3-Game Geography Arcade (TrueSize Slider, GeoRoute, TerraHunt Classic)',
-    )
+    .setTitle('Geodle API')
+    .setDescription('REST API for Geodle — Country Attribute Deduction Game')
     .setVersion('1.0.0')
     .build();
   const document = SwaggerModule.createDocument(app, swaggerConfig);
@@ -36,7 +34,7 @@ async function bootstrap(): Promise<void> {
   configureApp(app);
   const port = Number(process.env.PORT ?? 3000);
   await app.listen(port);
-  console.log(`[TerraHunt API] Listening on http://localhost:${port}/api/v1 (Docs: /api/docs)`);
+  console.log(`[Geodle API] Listening on http://localhost:${port}/api/v1 (Docs: /api/docs)`);
 }
 
 if (require.main === module) {

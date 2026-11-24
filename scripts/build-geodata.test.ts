@@ -1,102 +1,52 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import * as d3Geo from 'd3-geo';
-import * as topoClient from 'topojson-client';
-import type { Topology } from 'topojson-specification';
 import { describe, expect, it } from 'vitest';
-import type {
-  BuiltCountryRecord,
-  BuiltDistanceRecord,
-  BuiltNeighborEdge,
-} from './build-geodata';
+import type { SeedCountryRecord, SeedNeighborRecord } from './build-geodata';
 
 const DATA_DIR = path.resolve(__dirname, '..', 'data');
 
-describe('Generated Geodata Verification Suite', () => {
+describe('Geodle Dataset Verification', () => {
   const countries = JSON.parse(
     fs.readFileSync(path.join(DATA_DIR, 'countries.json'), 'utf8'),
-  ) as BuiltCountryRecord[];
+  ) as SeedCountryRecord[];
 
   const neighbors = JSON.parse(
     fs.readFileSync(path.join(DATA_DIR, 'country-neighbors.json'), 'utf8'),
-  ) as BuiltNeighborEdge[];
-
-  const distances = JSON.parse(
-    fs.readFileSync(path.join(DATA_DIR, 'country-distances.json'), 'utf8'),
-  ) as BuiltDistanceRecord[];
-
-  const topo = JSON.parse(
-    fs.readFileSync(path.join(DATA_DIR, 'countries-50m.topo.json'), 'utf8'),
-  ) as Topology;
+  ) as SeedNeighborRecord[];
 
   const byIso2 = new Map(countries.map((c) => [c.iso2, c]));
-  const distMap = new Map(distances.map((d) => [`${d.fromIso2}:${d.toIso2}`, d]));
 
-  it('includes ~197 playable countries with metropolitan core areas', () => {
-    expect(countries.length).toBeGreaterThanOrEqual(195);
-    expect(byIso2.get('FR')?.areaKm2).toBeGreaterThan(540_000);
-    expect(byIso2.get('FR')?.areaKm2).toBeLessThan(560_000);
-    expect(byIso2.get('DK')?.areaKm2).toBeLessThan(50_000); // No Greenland bloat!
-    expect(byIso2.get('GR')?.areaKm2).toBeCloseTo(131990, -3);
-    expect(byIso2.get('PH')?.areaKm2).toBe(300000);
-  });
-
-  it('preserves valid D3 spherical winding order on every TopoJSON feature', () => {
-    const fc = topoClient.feature(topo, topo.objects.countries) as unknown as {
-      features: Array<GeoJSON.Feature>;
-    };
-    expect(fc.features.length).toBeGreaterThan(200);
-    for (const f of fc.features) {
-      expect(d3Geo.geoArea(f)).toBeLessThan(Math.PI);
+  it('has all 197 playable countries with valid population, area, temperature, and landlocked flag', () => {
+    expect(countries).toHaveLength(197);
+    for (const c of countries) {
+      expect(c.population).toBeGreaterThan(0);
+      expect(c.areaKm2).toBeGreaterThan(0);
+      expect(Number.isFinite(c.avgTempC)).toBe(true);
+      expect(typeof c.isLandlocked).toBe('boolean');
+      expect(c.subregion.length).toBeGreaterThan(0);
     }
   });
 
-  it('guarantees true land & bridge neighbors have distanceKm = 0 and direction = null', () => {
-    const deFr = distMap.get('DE:FR')!;
-    expect(deFr.distanceKm).toBe(0);
-    expect(deFr.isNeighbor).toBe(true);
-    expect(deFr.direction).toBeNull();
-
-    const ruCn = distMap.get('RU:CN')!;
-    expect(ruCn.distanceKm).toBe(0);
-    expect(ruCn.isNeighbor).toBe(true);
-
-    // Kaliningrad & Northern Ireland & Nakhchivan preserved
-    expect(distMap.get('RU:PL')?.distanceKm).toBe(0);
-    expect(distMap.get('GB:IE')?.distanceKm).toBe(0);
-    expect(distMap.get('AZ:TR')?.distanceKm).toBe(0);
-
-    // Øresund Bridge & Channel Tunnel included for GeoRoute
-    expect(neighbors.some((n) => n.countryIso2 === 'SE' && n.neighborIso2 === 'DK')).toBe(
-      true,
-    );
-    expect(neighbors.some((n) => n.countryIso2 === 'GB' && n.neighborIso2 === 'FR')).toBe(
-      true,
-    );
+  it('correctly distinguishes landlocked (Binnenstaat) vs coastal countries', () => {
+    expect(byIso2.get('AT')?.isLandlocked).toBe(true); // Austria
+    expect(byIso2.get('CH')?.isLandlocked).toBe(true); // Switzerland
+    expect(byIso2.get('DE')?.isLandlocked).toBe(false); // Germany
+    expect(byIso2.get('JP')?.isLandlocked).toBe(false); // Japan (island)
   });
 
-  it('strips French Guiana so Brazil <-> France is > 6,000 km (not 0 km!)', () => {
-    const brFr = distMap.get('BR:FR')!;
-    expect(brFr.isNeighbor).toBe(false);
-    expect(brFr.distanceKm).toBeGreaterThan(6000);
-    expect(brFr.direction).toBe('NE');
+  it('includes German search aliases (e.g. Deutschland, Österreich, Elfenbeinküste)', () => {
+    expect(byIso2.get('DE')?.aliases).toContain('Deutschland');
+    expect(byIso2.get('AT')?.aliases).toContain('Österreich');
+    expect(byIso2.get('CI')?.aliases).toContain('Elfenbeinküste');
   });
 
-  it('handles Pacific antimeridian bearings cleanly (Japan -> US points NE/E, not West)', () => {
-    const jpUs = distMap.get('JP:US')!;
-    expect(['NE', 'E']).toContain(jpUs.direction);
+  it('stores symmetric land-border neighbors without overseas French Guiana bloat', () => {
+    const hasEdge = (a: string, b: string) =>
+      neighbors.some((n) => n.countryIso2 === a && n.neighborIso2 === b);
 
-    const deMa = distMap.get('DE:MA')!;
-    expect(deMa.direction).toBe('SW');
-  });
-
-  it('flags microstates (< 2500 km2) accurately with valid coordinates', () => {
-    for (const code of ['SG', 'MT', 'MC', 'MV', 'VA']) {
-      const m = byIso2.get(code);
-      expect(m, `Expected ${code} to exist`).toBeDefined();
-      expect(m!.isMicrostate).toBe(true);
-      expect(Number.isFinite(m!.labelLat)).toBe(true);
-      expect(Number.isFinite(m!.labelLng)).toBe(true);
-    }
+    expect(hasEdge('DE', 'AT')).toBe(true);
+    expect(hasEdge('AT', 'DE')).toBe(true);
+    expect(hasEdge('FR', 'BR')).toBe(false); // No French Guiana false border!
+    expect(neighbors.some((n) => n.countryIso2 === 'JP')).toBe(false); // Island has 0 land borders
   });
 });

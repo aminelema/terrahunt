@@ -1,0 +1,790 @@
+{
+  "AF": {
+    "population": 37172386,
+    "avgTempC": 13.4
+  },
+  "AO": {
+    "population": 30809762,
+    "avgTempC": 21.8
+  },
+  "AL": {
+    "population": 2866376,
+    "avgTempC": 12.4
+  },
+  "AD": {
+    "population": 77006,
+    "avgTempC": 8.3
+  },
+  "AE": {
+    "population": 9630959,
+    "avgTempC": 28.2
+  },
+  "AR": {
+    "population": 44494502,
+    "avgTempC": 15.1
+  },
+  "AM": {
+    "population": 2951776,
+    "avgTempC": 7.8
+  },
+  "AG": {
+    "population": 96286,
+    "avgTempC": 27.2
+  },
+  "AU": {
+    "population": 24982688,
+    "avgTempC": 22.1
+  },
+  "AT": {
+    "population": 8840521,
+    "avgTempC": 7.4
+  },
+  "AZ": {
+    "population": 9939800,
+    "avgTempC": 13
+  },
+  "BI": {
+    "population": 11175378,
+    "avgTempC": 20.5
+  },
+  "BE": {
+    "population": 11433256,
+    "avgTempC": 10.7
+  },
+  "BJ": {
+    "population": 11485048,
+    "avgTempC": 28
+  },
+  "BF": {
+    "population": 19751535,
+    "avgTempC": 29.3
+  },
+  "BD": {
+    "population": 161356039,
+    "avgTempC": 25.7
+  },
+  "BG": {
+    "population": 7025037,
+    "avgTempC": 11.4
+  },
+  "BH": {
+    "population": 1569439,
+    "avgTempC": 27.7
+  },
+  "BS": {
+    "population": 412623,
+    "avgTempC": 25.2
+  },
+  "BA": {
+    "population": 3323929,
+    "avgTempC": 10.4
+  },
+  "BY": {
+    "population": 9483499,
+    "avgTempC": 7.5
+  },
+  "BZ": {
+    "population": 383071,
+    "avgTempC": 25.7
+  },
+  "BO": {
+    "population": 11353142,
+    "avgTempC": 20.8
+  },
+  "BR": {
+    "population": 209469333,
+    "avgTempC": 25.4
+  },
+  "BB": {
+    "population": 286641,
+    "avgTempC": 26.6
+  },
+  "BN": {
+    "population": 452524,
+    "avgTempC": 26.9
+  },
+  "BT": {
+    "population": 754394,
+    "avgTempC": 10.4
+  },
+  "BW": {
+    "population": 2254126,
+    "avgTempC": 22.1
+  },
+  "CF": {
+    "population": 4666377,
+    "avgTempC": 25.5
+  },
+  "CA": {
+    "population": 37057765,
+    "avgTempC": -4
+  },
+  "CH": {
+    "population": 8513227,
+    "avgTempC": 6.5
+  },
+  "CL": {
+    "population": 18729160,
+    "avgTempC": 9.4
+  },
+  "CN": {
+    "population": 1392730000,
+    "avgTempC": 7.6
+  },
+  "CI": {
+    "population": 28873034,
+    "avgTempC": 26.5
+  },
+  "CM": {
+    "population": 25216237,
+    "avgTempC": 24.8
+  },
+  "CD": {
+    "population": 102262808,
+    "avgTempC": 24.2
+  },
+  "CG": {
+    "population": 6106869,
+    "avgTempC": 24.6
+  },
+  "CO": {
+    "population": 49648685,
+    "avgTempC": 25
+  },
+  "KM": {
+    "population": 832322,
+    "avgTempC": 23.7
+  },
+  "CV": {
+    "population": 598682,
+    "avgTempC": 23.3
+  },
+  "CR": {
+    "population": 4999441,
+    "avgTempC": 24.8
+  },
+  "CU": {
+    "population": 11338138,
+    "avgTempC": 25.8
+  },
+  "CY": {
+    "population": 1189265,
+    "avgTempC": 19
+  },
+  "CZ": {
+    "population": 10873689,
+    "avgTempC": 8.6
+  },
+  "DE": {
+    "population": 82905782,
+    "avgTempC": 9.6
+  },
+  "DJ": {
+    "population": 958920,
+    "avgTempC": 28.5
+  },
+  "DM": {
+    "population": 71625,
+    "avgTempC": 26.8
+  },
+  "DK": {
+    "population": 5793636,
+    "avgTempC": 8.9
+  },
+  "DO": {
+    "population": 10627165,
+    "avgTempC": 24.6
+  },
+  "DZ": {
+    "population": 42228429,
+    "avgTempC": 23.6
+  },
+  "EC": {
+    "population": 17084357,
+    "avgTempC": 21.4
+  },
+  "EG": {
+    "population": 98423595,
+    "avgTempC": 23.1
+  },
+  "ER": {
+    "population": 6213972,
+    "avgTempC": 26.6
+  },
+  "ES": {
+    "population": 46796540,
+    "avgTempC": 14.1
+  },
+  "EE": {
+    "population": 1321977,
+    "avgTempC": 6.3
+  },
+  "ET": {
+    "population": 109224559,
+    "avgTempC": 23.4
+  },
+  "FI": {
+    "population": 5515525,
+    "avgTempC": 2.5
+  },
+  "FJ": {
+    "population": 936375,
+    "avgTempC": 25.4
+  },
+  "FR": {
+    "population": 66977107,
+    "avgTempC": 11.7
+  },
+  "FM": {
+    "population": 115224,
+    "avgTempC": 27.1
+  },
+  "GA": {
+    "population": 2119275,
+    "avgTempC": 25.2
+  },
+  "GB": {
+    "population": 66460344,
+    "avgTempC": 9.2
+  },
+  "GE": {
+    "population": 3726549,
+    "avgTempC": 9
+  },
+  "GH": {
+    "population": 29767108,
+    "avgTempC": 27.7
+  },
+  "GN": {
+    "population": 12414318,
+    "avgTempC": 25.9
+  },
+  "GM": {
+    "population": 2773168,
+    "avgTempC": 27.5
+  },
+  "GW": {
+    "population": 1874309,
+    "avgTempC": 28
+  },
+  "GQ": {
+    "population": 1308974,
+    "avgTempC": 24.7
+  },
+  "GR": {
+    "population": 10731726,
+    "avgTempC": 14.3
+  },
+  "GD": {
+    "population": 111454,
+    "avgTempC": 26.5
+  },
+  "GT": {
+    "population": 17247807,
+    "avgTempC": 23.7
+  },
+  "GY": {
+    "population": 779004,
+    "avgTempC": 26.1
+  },
+  "HN": {
+    "population": 9587522,
+    "avgTempC": 24.7
+  },
+  "HR": {
+    "population": 4087843,
+    "avgTempC": 12
+  },
+  "HT": {
+    "population": 11123176,
+    "avgTempC": 25
+  },
+  "HU": {
+    "population": 9775564,
+    "avgTempC": 11.5
+  },
+  "ID": {
+    "population": 267663435,
+    "avgTempC": 26
+  },
+  "IN": {
+    "population": 1352617328,
+    "avgTempC": 24.9
+  },
+  "IE": {
+    "population": 4867309,
+    "avgTempC": 9.7
+  },
+  "IR": {
+    "population": 81800269,
+    "avgTempC": 18.3
+  },
+  "IQ": {
+    "population": 38433600,
+    "avgTempC": 23
+  },
+  "IS": {
+    "population": 352721,
+    "avgTempC": 1.9
+  },
+  "IL": {
+    "population": 8882800,
+    "avgTempC": 20
+  },
+  "IT": {
+    "population": 60421760,
+    "avgTempC": 13.2
+  },
+  "JM": {
+    "population": 2934855,
+    "avgTempC": 25.9
+  },
+  "JO": {
+    "population": 9956011,
+    "avgTempC": 19.5
+  },
+  "JP": {
+    "population": 126529100,
+    "avgTempC": 11.8
+  },
+  "KZ": {
+    "population": 18272430,
+    "avgTempC": 7.1
+  },
+  "KE": {
+    "population": 51393010,
+    "avgTempC": 25.1
+  },
+  "KG": {
+    "population": 6322800,
+    "avgTempC": 2.7
+  },
+  "KH": {
+    "population": 16249798,
+    "avgTempC": 27.4
+  },
+  "KI": {
+    "population": 115847,
+    "avgTempC": 27.8
+  },
+  "KN": {
+    "population": 47755,
+    "avgTempC": 26.2
+  },
+  "KR": {
+    "population": 51712619,
+    "avgTempC": 12.2
+  },
+  "XK": {
+    "population": 1761985,
+    "avgTempC": 10.6
+  },
+  "KW": {
+    "population": 4137309,
+    "avgTempC": 26.3
+  },
+  "LA": {
+    "population": 7633779,
+    "avgTempC": 24.4
+  },
+  "LB": {
+    "population": 6848925,
+    "avgTempC": 15.5
+  },
+  "LR": {
+    "population": 4818977,
+    "avgTempC": 25.5
+  },
+  "LY": {
+    "population": 6678567,
+    "avgTempC": 22.8
+  },
+  "LC": {
+    "population": 180251,
+    "avgTempC": 26.4
+  },
+  "LI": {
+    "population": 37910,
+    "avgTempC": 7.6
+  },
+  "LK": {
+    "population": 21670000,
+    "avgTempC": 27.3
+  },
+  "LS": {
+    "population": 2108132,
+    "avgTempC": 12.4
+  },
+  "LT": {
+    "population": 2801543,
+    "avgTempC": 7.4
+  },
+  "LU": {
+    "population": 607950,
+    "avgTempC": 10
+  },
+  "LV": {
+    "population": 1927174,
+    "avgTempC": 6.9
+  },
+  "MA": {
+    "population": 36029138,
+    "avgTempC": 18.1
+  },
+  "MC": {
+    "population": 38682,
+    "avgTempC": 13.5
+  },
+  "MD": {
+    "population": 2706049,
+    "avgTempC": 10.9
+  },
+  "MG": {
+    "population": 26262368,
+    "avgTempC": 22.6
+  },
+  "MV": {
+    "population": 515696,
+    "avgTempC": 28.1
+  },
+  "MX": {
+    "population": 126190788,
+    "avgTempC": 21.3
+  },
+  "MH": {
+    "population": 58413,
+    "avgTempC": 28
+  },
+  "MK": {
+    "population": 1836713,
+    "avgTempC": 11.1
+  },
+  "ML": {
+    "population": 19077690,
+    "avgTempC": 29.2
+  },
+  "MT": {
+    "population": 484630,
+    "avgTempC": 19.6
+  },
+  "MM": {
+    "population": 54577997,
+    "avgTempC": 25.8
+  },
+  "ME": {
+    "population": 616177,
+    "avgTempC": 10.5
+  },
+  "MN": {
+    "population": 3170208,
+    "avgTempC": 1.1
+  },
+  "MZ": {
+    "population": 29495962,
+    "avgTempC": 24.4
+  },
+  "MR": {
+    "population": 4403319,
+    "avgTempC": 28.8
+  },
+  "MU": {
+    "population": 1265303,
+    "avgTempC": 23.3
+  },
+  "MW": {
+    "population": 18143315,
+    "avgTempC": 22.7
+  },
+  "MY": {
+    "population": 31528585,
+    "avgTempC": 26.4
+  },
+  "NA": {
+    "population": 2448255,
+    "avgTempC": 20.5
+  },
+  "NE": {
+    "population": 22442948,
+    "avgTempC": 28
+  },
+  "NG": {
+    "population": 195874740,
+    "avgTempC": 27.3
+  },
+  "NI": {
+    "population": 6465513,
+    "avgTempC": 25.9
+  },
+  "NL": {
+    "population": 17231624,
+    "avgTempC": 10.5
+  },
+  "NO": {
+    "population": 5311916,
+    "avgTempC": 2.2
+  },
+  "NP": {
+    "population": 28087871,
+    "avgTempC": 14.2
+  },
+  "NR": {
+    "population": 12704,
+    "avgTempC": 27.8
+  },
+  "NZ": {
+    "population": 4841000,
+    "avgTempC": 10.5
+  },
+  "OM": {
+    "population": 4829483,
+    "avgTempC": 27.6
+  },
+  "PK": {
+    "population": 212215030,
+    "avgTempC": 21.4
+  },
+  "PA": {
+    "population": 4176873,
+    "avgTempC": 25.6
+  },
+  "PE": {
+    "population": 31989256,
+    "avgTempC": 19.7
+  },
+  "PH": {
+    "population": 106651922,
+    "avgTempC": 26.3
+  },
+  "PW": {
+    "population": 17907,
+    "avgTempC": 27.9
+  },
+  "PG": {
+    "population": 8606316,
+    "avgTempC": 24.7
+  },
+  "PL": {
+    "population": 37974750,
+    "avgTempC": 8.8
+  },
+  "KP": {
+    "population": 26160821,
+    "avgTempC": 7.5
+  },
+  "PT": {
+    "population": 10283822,
+    "avgTempC": 15.9
+  },
+  "PY": {
+    "population": 6956071,
+    "avgTempC": 23.9
+  },
+  "PS": {
+    "population": 5165775,
+    "avgTempC": 19.6
+  },
+  "QA": {
+    "population": 2781677,
+    "avgTempC": 28
+  },
+  "RO": {
+    "population": 19466145,
+    "avgTempC": 10.2
+  },
+  "RU": {
+    "population": 144444359,
+    "avgTempC": -5.1
+  },
+  "RW": {
+    "population": 12301939,
+    "avgTempC": 19.2
+  },
+  "SA": {
+    "population": 33699947,
+    "avgTempC": 25.9
+  },
+  "SD": {
+    "population": 41801533,
+    "avgTempC": 28
+  },
+  "SN": {
+    "population": 15854360,
+    "avgTempC": 28.9
+  },
+  "SG": {
+    "population": 5638676,
+    "avgTempC": 27.7
+  },
+  "SB": {
+    "population": 652858,
+    "avgTempC": 25.9
+  },
+  "SL": {
+    "population": 7650154,
+    "avgTempC": 26.5
+  },
+  "SV": {
+    "population": 6420744,
+    "avgTempC": 25.2
+  },
+  "SM": {
+    "population": 33785,
+    "avgTempC": 12.8
+  },
+  "SO": {
+    "population": 15008154,
+    "avgTempC": 27
+  },
+  "RS": {
+    "population": 6963764,
+    "avgTempC": 11.4
+  },
+  "SS": {
+    "population": 10975920,
+    "avgTempC": 28
+  },
+  "ST": {
+    "population": 231856,
+    "avgTempC": 25.2
+  },
+  "SR": {
+    "population": 575991,
+    "avgTempC": 26.6
+  },
+  "SK": {
+    "population": 5446771,
+    "avgTempC": 8.8
+  },
+  "SI": {
+    "population": 2073894,
+    "avgTempC": 9.9
+  },
+  "SE": {
+    "population": 10175214,
+    "avgTempC": 3.2
+  },
+  "SZ": {
+    "population": 1210822,
+    "avgTempC": 20.4
+  },
+  "SC": {
+    "population": 96762,
+    "avgTempC": 27.1
+  },
+  "SY": {
+    "population": 23227014,
+    "avgTempC": 18
+  },
+  "TD": {
+    "population": 15477751,
+    "avgTempC": 27.6
+  },
+  "TG": {
+    "population": 7889094,
+    "avgTempC": 27.3
+  },
+  "TH": {
+    "population": 69428524,
+    "avgTempC": 26.9
+  },
+  "TJ": {
+    "population": 9100837,
+    "avgTempC": 3.9
+  },
+  "TM": {
+    "population": 5850908,
+    "avgTempC": 16.7
+  },
+  "TL": {
+    "population": 1360596,
+    "avgTempC": 25.6
+  },
+  "TO": {
+    "population": 103197,
+    "avgTempC": 25
+  },
+  "TT": {
+    "population": 1389858,
+    "avgTempC": 26.6
+  },
+  "TN": {
+    "population": 11565204,
+    "avgTempC": 20.5
+  },
+  "TR": {
+    "population": 85326000,
+    "avgTempC": 11.7
+  },
+  "TV": {
+    "population": 11508,
+    "avgTempC": 28.6
+  },
+  "TW": {
+    "population": 23570000,
+    "avgTempC": 22.1
+  },
+  "TZ": {
+    "population": 56318348,
+    "avgTempC": 22.9
+  },
+  "UG": {
+    "population": 42723139,
+    "avgTempC": 23.3
+  },
+  "UA": {
+    "population": 44622516,
+    "avgTempC": 9.3
+  },
+  "UY": {
+    "population": 3449299,
+    "avgTempC": 18
+  },
+  "US": {
+    "population": 334914895,
+    "avgTempC": 9.5
+  },
+  "UZ": {
+    "population": 32955400,
+    "avgTempC": 13.7
+  },
+  "VA": {
+    "population": 764,
+    "avgTempC": 15.5
+  },
+  "VC": {
+    "population": 103698,
+    "avgTempC": 26.6
+  },
+  "VE": {
+    "population": 28870195,
+    "avgTempC": 25.7
+  },
+  "VN": {
+    "population": 98858950,
+    "avgTempC": 24.5
+  },
+  "VU": {
+    "population": 292680,
+    "avgTempC": 24.4
+  },
+  "WS": {
+    "population": 196130,
+    "avgTempC": 27.6
+  },
+  "YE": {
+    "population": 28498687,
+    "avgTempC": 25.5
+  },
+  "ZA": {
+    "population": 57779622,
+    "avgTempC": 18.2
+  },
+  "ZM": {
+    "population": 17351822,
+    "avgTempC": 22.2
+  },
+  "ZW": {
+    "population": 14439018,
+    "avgTempC": 21.9
+  }
+}

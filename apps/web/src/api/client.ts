@@ -1,8 +1,7 @@
 import type {
   CountriesCatalogResponse,
-  SubmitTrueSizeGuessResponse,
-  TrueSizeMode,
-  TrueSizeSession,
+  GameMode,
+  GeodleSession,
 } from '@terrahunt/shared';
 
 const API_BASE = '/api/v1';
@@ -20,10 +19,9 @@ export class ApiError extends Error {
 async function requestJson<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
     ...init,
-    credentials: 'include',
+    credentials: 'include', // Automatically sends/receives our httpOnly guest cookie
     headers: {
       'Content-Type': 'application/json',
-      'X-Requested-With': 'TerraHunt',
       ...(init?.headers ?? {}),
     },
   });
@@ -38,7 +36,7 @@ async function requestJson<T>(path: string, init?: RequestInit): Promise<T> {
         message = body.message;
       }
     } catch {
-      // ignore non-json body
+      // Ignore non-JSON error responses
     }
     throw new ApiError(res.status, message);
   }
@@ -51,27 +49,23 @@ export const apiClient = {
     return requestJson<CountriesCatalogResponse>('/countries', { method: 'GET' });
   },
 
-  startTrueSizeSession(mode: TrueSizeMode): Promise<TrueSizeSession> {
-    return requestJson<TrueSizeSession>('/games/truesize', {
+  startSession(mode: GameMode): Promise<GeodleSession> {
+    return requestJson<GeodleSession>('/games/geodle', {
       method: 'POST',
       body: JSON.stringify({ mode }),
     });
   },
 
-  getTrueSizeSession(sessionId: string): Promise<TrueSizeSession> {
-    return requestJson<TrueSizeSession>(`/games/truesize/${sessionId}`, {
-      method: 'GET',
+  submitGuess(sessionId: string, countryIso2: string): Promise<GeodleSession> {
+    return requestJson<GeodleSession>(`/games/geodle/${sessionId}/guess`, {
+      method: 'POST',
+      body: JSON.stringify({ countryIso2 }),
     });
   },
 
-  submitTrueSizeGuess(
-    sessionId: string,
-    roundNumber: number,
-    guessedRatio: number,
-  ): Promise<SubmitTrueSizeGuessResponse> {
-    return requestJson<SubmitTrueSizeGuessResponse>(`/games/truesize/${sessionId}/guess`, {
+  giveUp(sessionId: string): Promise<GeodleSession> {
+    return requestJson<GeodleSession>(`/games/geodle/${sessionId}/give-up`, {
       method: 'POST',
-      body: JSON.stringify({ roundNumber, guessedRatio }),
     });
   },
 };

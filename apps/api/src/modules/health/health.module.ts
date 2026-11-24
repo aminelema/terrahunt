@@ -12,9 +12,7 @@ export class HealthController {
   @ApiOperation({ summary: 'Check API and PostgreSQL database readiness' })
   @ApiOkResponse({ description: 'Service is healthy' })
   async getHealth(): Promise<HealthResponse> {
-    const countriesCount = await this.prisma.country.count({
-      where: { isPlayable: true },
-    });
+    const countriesCount = await this.prisma.country.count();
     return {
       status: 'ok',
       database: 'up',

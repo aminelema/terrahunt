@@ -1,14 +1,12 @@
 import { z } from 'zod';
 import {
+  ClueStatusSchema,
   CountryRegionSchema,
+  Direction8Schema,
   GameModeSchema,
+  NumericTrendSchema,
   SessionStatusSchema,
 } from './enums';
-import {
-  TRUESIZE_MAX_SLIDER_RATIO,
-  TRUESIZE_MIN_SLIDER_RATIO,
-  TRUESIZE_ROUNDS_PER_GAME,
-} from './scoring';
 
 export const HealthResponseSchema = z.object({
   status: z.literal('ok'),
@@ -18,89 +16,103 @@ export const HealthResponseSchema = z.object({
 });
 export type HealthResponse = z.infer<typeof HealthResponseSchema>;
 
-export const CountrySummarySchema = z.object({
+/** Public country item used by the frontend search dropdown. */
+export const CountryOptionSchema = z.object({
   iso2: z.string().length(2),
-  iso3: z.string().length(3),
   nameEn: z.string(),
-  capital: z.string().nullable(),
-  region: CountryRegionSchema,
   flagEmoji: z.string(),
-  isMicrostate: z.boolean(),
-  labelLat: z.number(),
-  labelLng: z.number(),
+  region: CountryRegionSchema,
   aliases: z.array(z.string()),
 });
-export type CountrySummary = z.infer<typeof CountrySummarySchema>;
+export type CountryOption = z.infer<typeof CountryOptionSchema>;
 
 export const CountriesCatalogResponseSchema = z.object({
-  countries: z.array(CountrySummarySchema),
+  countries: z.array(CountryOptionSchema),
 });
 export type CountriesCatalogResponse = z.infer<typeof CountriesCatalogResponseSchema>;
 
-export const TrueSizeModeSchema = GameModeSchema.extract(['DAILY', 'FREEPLAY']);
-export type TrueSizeMode = z.infer<typeof TrueSizeModeSchema>;
-
-export const CreateTrueSizeGameRequestSchema = z.object({
-  mode: TrueSizeModeSchema.default('FREEPLAY'),
+export const StartGeodleGameRequestSchema = z.object({
+  mode: GameModeSchema.default('DAILY'),
 });
-export type CreateTrueSizeGameRequest = z.infer<typeof CreateTrueSizeGameRequestSchema>;
+export type StartGeodleGameRequest = z.infer<typeof StartGeodleGameRequestSchema>;
 
-export const SubmitTrueSizeGuessRequestSchema = z.object({
-  roundNumber: z.number().int().min(1).max(TRUESIZE_ROUNDS_PER_GAME),
-  guessedRatio: z
-    .number()
-    .min(TRUESIZE_MIN_SLIDER_RATIO * 0.5)
-    .max(TRUESIZE_MAX_SLIDER_RATIO * 2),
+export const SubmitGeodleGuessRequestSchema = z.object({
+  countryIso2: z
+    .string()
+    .trim()
+    .length(2)
+    .transform((v) => v.toUpperCase()),
 });
-export type SubmitTrueSizeGuessRequest = z.infer<typeof SubmitTrueSizeGuessRequestSchema>;
+export type SubmitGeodleGuessRequest = z.infer<typeof SubmitGeodleGuessRequestSchema>;
 
-export const TrueSizeCountryRefSchema = z.object({
+export const GeodleGuessCluesSchema = z.object({
+  continent: z.object({
+    status: ClueStatusSchema,
+    region: CountryRegionSchema,
+    subregion: z.string(),
+  }),
+  population: z.object({
+    status: ClueStatusSchema,
+    trend: NumericTrendSchema,
+    value: z.number(),
+  }),
+  areaKm2: z.object({
+    status: ClueStatusSchema,
+    trend: NumericTrendSchema,
+    value: z.number(),
+  }),
+  landlocked: z.object({
+    status: ClueStatusSchema,
+    value: z.boolean(),
+  }),
+  avgTempC: z.object({
+    status: ClueStatusSchema,
+    trend: NumericTrendSchema,
+    value: z.number(),
+  }),
+  neighborOrDirection: z.object({
+    status: ClueStatusSchema,
+    isNeighbor: z.boolean(),
+    direction: Direction8Schema.nullable(),
+  }),
+});
+
+export const GeodleGuessRowSchema = z.object({
+  guessOrder: z.number().int().min(1),
+  countryIso2: z.string().length(2),
+  countryName: z.string(),
+  flagEmoji: z.string(),
+  isCorrect: z.boolean(),
+  clues: GeodleGuessCluesSchema,
+  createdAt: z.string(),
+});
+export type GeodleGuessRow = z.infer<typeof GeodleGuessRowSchema>;
+
+export const SecretCountryRevealSchema = z.object({
   iso2: z.string().length(2),
   nameEn: z.string(),
   flagEmoji: z.string(),
   capital: z.string().nullable(),
   region: CountryRegionSchema,
-  labelLat: z.number(),
-  labelLng: z.number(),
+  subregion: z.string(),
+  population: z.number(),
+  areaKm2: z.number(),
+  isLandlocked: z.boolean(),
+  avgTempC: z.number(),
 });
-export type TrueSizeCountryRef = z.infer<typeof TrueSizeCountryRefSchema>;
+export type SecretCountryReveal = z.infer<typeof SecretCountryRevealSchema>;
 
-export const TrueSizeRoundRevealSchema = z.object({
-  guessedRatio: z.number(),
-  trueRatio: z.number(),
-  baseAreaKm2: z.number(),
-  targetAreaKm2: z.number(),
-  score: z.number().int().min(0).max(1000),
-  answeredAt: z.string(),
-});
-export type TrueSizeRoundReveal = z.infer<typeof TrueSizeRoundRevealSchema>;
-
-export const TrueSizeRoundSchema = z.object({
-  roundNumber: z.number().int().min(1).max(TRUESIZE_ROUNDS_PER_GAME),
-  baseCountry: TrueSizeCountryRefSchema,
-  targetCountry: TrueSizeCountryRefSchema,
-  answered: z.boolean(),
-  reveal: TrueSizeRoundRevealSchema.nullable(),
-});
-export type TrueSizeRound = z.infer<typeof TrueSizeRoundSchema>;
-
-export const TrueSizeSessionSchema = z.object({
+export const GeodleSessionSchema = z.object({
   sessionId: z.string().uuid(),
-  mode: TrueSizeModeSchema,
+  mode: GameModeSchema,
   dailyChallengeNumber: z.number().int().nullable(),
   dailyDate: z.string().nullable(),
   status: SessionStatusSchema,
-  currentRound: z.number().int().min(1).max(TRUESIZE_ROUNDS_PER_GAME),
-  totalScore: z.number().int().min(0).max(5000),
-  maxPossibleScore: z.number().int(),
-  rounds: z.array(TrueSizeRoundSchema),
+  guessCount: z.number().int().min(0),
+  guesses: z.array(GeodleGuessRowSchema),
+  /** Strictly null while status === 'IN_PROGRESS' so nobody can cheat via DevTools! */
+  secretCountry: SecretCountryRevealSchema.nullable(),
   startedAt: z.string(),
   endedAt: z.string().nullable(),
 });
-export type TrueSizeSession = z.infer<typeof TrueSizeSessionSchema>;
-
-export const SubmitTrueSizeGuessResponseSchema = z.object({
-  round: TrueSizeRoundSchema,
-  session: TrueSizeSessionSchema,
-});
-export type SubmitTrueSizeGuessResponse = z.infer<typeof SubmitTrueSizeGuessResponseSchema>;
+export type GeodleSession = z.infer<typeof GeodleSessionSchema>;

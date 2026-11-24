@@ -18,7 +18,6 @@ export class CountriesService {
     }
 
     const rows = await this.prisma.country.findMany({
-      where: { isPlayable: true },
       orderBy: { nameEn: 'asc' },
       include: {
         aliases: {
@@ -31,14 +30,9 @@ export class CountriesService {
     const payload: CountriesCatalogResponse = {
       countries: rows.map((c) => ({
         iso2: c.iso2,
-        iso3: c.iso3,
         nameEn: c.nameEn,
-        capital: c.capital,
-        region: c.region,
         flagEmoji: c.flagEmoji,
-        isMicrostate: c.isMicrostate,
-        labelLat: c.labelLat,
-        labelLng: c.labelLng,
+        region: c.region,
         aliases: c.aliases.map((a) => a.alias),
       })),
     };
@@ -63,9 +57,7 @@ export class CountriesController {
 
   @Get()
   @Header('Cache-Control', 'public, max-age=3600')
-  @ApiOperation({
-    summary: 'Return playable countries catalog (omits areaKm2 for TrueSize anti-cheat)',
-  })
+  @ApiOperation({ summary: 'Return searchable country options with English & German aliases' })
   @ApiOkResponse({ description: 'Playable countries list' })
   async listCountries(@Req() req: Request, @Res() res: Response): Promise<void> {
     const { payload, etag } = await this.countriesService.getCatalog();

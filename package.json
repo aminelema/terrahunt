@@ -20,26 +20,10 @@
     "test": "vitest run scripts/build-geodata.test.ts && pnpm --filter @terrahunt/shared test && pnpm --filter @terrahunt/api test && pnpm --filter @terrahunt/web test"
   },
   "devDependencies": {
-    "@turf/area": "^7.2.0",
-    "@turf/bearing": "^7.2.0",
-    "@turf/boolean-point-in-polygon": "^7.2.0",
-    "@turf/centroid": "^7.2.0",
-    "@turf/distance": "^7.2.0",
-    "@turf/helpers": "^7.2.0",
-    "@turf/point-on-feature": "^7.2.0",
-    "@turf/polygon-to-line": "^7.2.0",
-    "@types/d3-geo": "^3.1.0",
-    "@types/geojson": "^7946.0.15",
     "@types/node": "^22.10.2",
-    "@types/topojson-client": "^3.1.5",
-    "@types/topojson-specification": "^1.0.5",
-    "d3-geo": "^3.1.1",
-    "topojson-client": "^3.1.0",
-    "topojson-server": "^3.0.1",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8",
-    "world-atlas": "^2.0.2",
     "world-countries": "^5.1.0"
   }
 }
