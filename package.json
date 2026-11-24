@@ -1,0 +1,45 @@
+{
+  "name": "terrahunt",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@9.15.4",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "scripts": {
+    "geo:build": "tsx scripts/build-geodata.ts",
+    "geo:test": "vitest run scripts/build-geodata.test.ts",
+    "db:up": "docker compose -f docker-compose.dev.yml up -d",
+    "db:down": "docker compose -f docker-compose.dev.yml down",
+    "db:migrate": "pnpm --filter @terrahunt/api prisma:migrate",
+    "db:seed": "pnpm --filter @terrahunt/api prisma:seed",
+    "dev:api": "pnpm --filter @terrahunt/api dev",
+    "dev:web": "pnpm --filter @terrahunt/web dev",
+    "build": "pnpm --filter @terrahunt/shared build && pnpm --filter @terrahunt/api build && pnpm --filter @terrahunt/web build",
+    "typecheck": "pnpm --filter @terrahunt/shared typecheck && pnpm --filter @terrahunt/api typecheck && pnpm --filter @terrahunt/web typecheck",
+    "test": "vitest run scripts/build-geodata.test.ts && pnpm --filter @terrahunt/shared test && pnpm --filter @terrahunt/api test && pnpm --filter @terrahunt/web test"
+  },
+  "devDependencies": {
+    "@turf/area": "^7.2.0",
+    "@turf/bearing": "^7.2.0",
+    "@turf/boolean-point-in-polygon": "^7.2.0",
+    "@turf/centroid": "^7.2.0",
+    "@turf/distance": "^7.2.0",
+    "@turf/helpers": "^7.2.0",
+    "@turf/point-on-feature": "^7.2.0",
+    "@turf/polygon-to-line": "^7.2.0",
+    "@types/d3-geo": "^3.1.0",
+    "@types/geojson": "^7946.0.15",
+    "@types/node": "^22.10.2",
+    "@types/topojson-client": "^3.1.5",
+    "@types/topojson-specification": "^1.0.5",
+    "d3-geo": "^3.1.1",
+    "topojson-client": "^3.1.0",
+    "topojson-server": "^3.0.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "world-atlas": "^2.0.2",
+    "world-countries": "^5.1.0"
+  }
+}

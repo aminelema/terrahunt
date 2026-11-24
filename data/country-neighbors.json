@@ -1,0 +1,3202 @@
+[
+  {
+    "countryIso2": "AD",
+    "neighborIso2": "ES",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AD",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AE",
+    "neighborIso2": "OM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AE",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "PK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "TJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "TM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AF",
+    "neighborIso2": "UZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AL",
+    "neighborIso2": "GR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AL",
+    "neighborIso2": "ME",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AL",
+    "neighborIso2": "MK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AL",
+    "neighborIso2": "XK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AM",
+    "neighborIso2": "AZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AM",
+    "neighborIso2": "GE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AM",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AM",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AO",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AO",
+    "neighborIso2": "CG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AO",
+    "neighborIso2": "NA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AO",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AR",
+    "neighborIso2": "BO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AR",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AR",
+    "neighborIso2": "CL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AR",
+    "neighborIso2": "PY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AR",
+    "neighborIso2": "UY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "CH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "CZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "LI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "SI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AT",
+    "neighborIso2": "SK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AZ",
+    "neighborIso2": "AM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AZ",
+    "neighborIso2": "GE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AZ",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AZ",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "AZ",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BA",
+    "neighborIso2": "HR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BA",
+    "neighborIso2": "ME",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BA",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BD",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BD",
+    "neighborIso2": "MM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BE",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BE",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BE",
+    "neighborIso2": "LU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BE",
+    "neighborIso2": "NL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "BJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "CI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "GH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BF",
+    "neighborIso2": "TG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BG",
+    "neighborIso2": "GR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BG",
+    "neighborIso2": "MK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BG",
+    "neighborIso2": "RO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BG",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BG",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BH",
+    "neighborIso2": "SA",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "BI",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BI",
+    "neighborIso2": "RW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BI",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BJ",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BJ",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BJ",
+    "neighborIso2": "NG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BJ",
+    "neighborIso2": "TG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BN",
+    "neighborIso2": "MY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BO",
+    "neighborIso2": "AR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BO",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BO",
+    "neighborIso2": "CL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BO",
+    "neighborIso2": "PE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BO",
+    "neighborIso2": "PY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "AR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "BO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "CO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "GY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "PE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "PY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "SR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "UY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BR",
+    "neighborIso2": "VE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BT",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BT",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BW",
+    "neighborIso2": "NA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BW",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BW",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BW",
+    "neighborIso2": "ZW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BY",
+    "neighborIso2": "LT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BY",
+    "neighborIso2": "LV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BY",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BY",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BY",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BZ",
+    "neighborIso2": "GT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "BZ",
+    "neighborIso2": "MX",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CA",
+    "neighborIso2": "US",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "AO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "BI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "CG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "RW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "UG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CD",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "CG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CF",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CG",
+    "neighborIso2": "AO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CG",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CG",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CG",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CG",
+    "neighborIso2": "GA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CH",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CH",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CH",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CH",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CH",
+    "neighborIso2": "LI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CI",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CI",
+    "neighborIso2": "GH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CI",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CI",
+    "neighborIso2": "LR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CI",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CL",
+    "neighborIso2": "AR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CL",
+    "neighborIso2": "BO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CL",
+    "neighborIso2": "PE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "CG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "GA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "GQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "NG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CM",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "BT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "KG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "KP",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "KZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "LA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "MM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "MN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "NP",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "PK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "TJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CN",
+    "neighborIso2": "VN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CO",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CO",
+    "neighborIso2": "EC",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CO",
+    "neighborIso2": "PA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CO",
+    "neighborIso2": "PE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CO",
+    "neighborIso2": "VE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CR",
+    "neighborIso2": "NI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CR",
+    "neighborIso2": "PA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CZ",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CZ",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CZ",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "CZ",
+    "neighborIso2": "SK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "BE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "CH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "CZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "DK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "LU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "NL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DE",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DJ",
+    "neighborIso2": "ER",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DJ",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DJ",
+    "neighborIso2": "SO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DK",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DK",
+    "neighborIso2": "SE",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "DO",
+    "neighborIso2": "HT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "MA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "MR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "DZ",
+    "neighborIso2": "TN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EC",
+    "neighborIso2": "CO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EC",
+    "neighborIso2": "PE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EE",
+    "neighborIso2": "LV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EE",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EG",
+    "neighborIso2": "IL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EG",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EG",
+    "neighborIso2": "PS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "EG",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ER",
+    "neighborIso2": "DJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ER",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ER",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ES",
+    "neighborIso2": "AD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ES",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ES",
+    "neighborIso2": "MA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ES",
+    "neighborIso2": "PT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "DJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "ER",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "KE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "SO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ET",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FI",
+    "neighborIso2": "NO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FI",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FI",
+    "neighborIso2": "SE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "AD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "BE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "CH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "ES",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "GB",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "LU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "FR",
+    "neighborIso2": "MC",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GA",
+    "neighborIso2": "CG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GA",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GA",
+    "neighborIso2": "GQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GB",
+    "neighborIso2": "FR",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "GB",
+    "neighborIso2": "IE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GE",
+    "neighborIso2": "AM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GE",
+    "neighborIso2": "AZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GE",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GE",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GH",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GH",
+    "neighborIso2": "CI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GH",
+    "neighborIso2": "TG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GM",
+    "neighborIso2": "SN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "CI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "GW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "LR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "SL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GN",
+    "neighborIso2": "SN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GQ",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GQ",
+    "neighborIso2": "GA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GR",
+    "neighborIso2": "AL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GR",
+    "neighborIso2": "BG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GR",
+    "neighborIso2": "MK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GR",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GT",
+    "neighborIso2": "BZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GT",
+    "neighborIso2": "HN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GT",
+    "neighborIso2": "MX",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GT",
+    "neighborIso2": "SV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GW",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GW",
+    "neighborIso2": "SN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GY",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GY",
+    "neighborIso2": "SR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "GY",
+    "neighborIso2": "VE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HN",
+    "neighborIso2": "GT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HN",
+    "neighborIso2": "NI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HN",
+    "neighborIso2": "SV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HR",
+    "neighborIso2": "BA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HR",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HR",
+    "neighborIso2": "ME",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HR",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HR",
+    "neighborIso2": "SI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HT",
+    "neighborIso2": "DO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "HR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "RO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "SI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "SK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "HU",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ID",
+    "neighborIso2": "MY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ID",
+    "neighborIso2": "PG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ID",
+    "neighborIso2": "TL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IE",
+    "neighborIso2": "GB",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IL",
+    "neighborIso2": "EG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IL",
+    "neighborIso2": "JO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IL",
+    "neighborIso2": "LB",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IL",
+    "neighborIso2": "PS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IL",
+    "neighborIso2": "SY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "BD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "BT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "LK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "MM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "NP",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IN",
+    "neighborIso2": "PK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "JO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "KW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "SY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IQ",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "AM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "AZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "PK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "TM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IR",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "CH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "SI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "SM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "IT",
+    "neighborIso2": "VA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "JO",
+    "neighborIso2": "IL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "JO",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "JO",
+    "neighborIso2": "PS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "JO",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "JO",
+    "neighborIso2": "SY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KE",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KE",
+    "neighborIso2": "SO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KE",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KE",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KE",
+    "neighborIso2": "UG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KG",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KG",
+    "neighborIso2": "KZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KG",
+    "neighborIso2": "TJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KG",
+    "neighborIso2": "UZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KH",
+    "neighborIso2": "LA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KH",
+    "neighborIso2": "TH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KH",
+    "neighborIso2": "VN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KP",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KP",
+    "neighborIso2": "KR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KP",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KR",
+    "neighborIso2": "KP",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KW",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KW",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KZ",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KZ",
+    "neighborIso2": "KG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KZ",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KZ",
+    "neighborIso2": "TM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "KZ",
+    "neighborIso2": "UZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LA",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LA",
+    "neighborIso2": "KH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LA",
+    "neighborIso2": "MM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LA",
+    "neighborIso2": "TH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LA",
+    "neighborIso2": "VN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LB",
+    "neighborIso2": "IL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LB",
+    "neighborIso2": "SY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LI",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LI",
+    "neighborIso2": "CH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LK",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LR",
+    "neighborIso2": "CI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LR",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LR",
+    "neighborIso2": "SL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LS",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LT",
+    "neighborIso2": "BY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LT",
+    "neighborIso2": "LV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LT",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LT",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LU",
+    "neighborIso2": "BE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LU",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LU",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LV",
+    "neighborIso2": "BY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LV",
+    "neighborIso2": "EE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LV",
+    "neighborIso2": "LT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LV",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "EG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "LY",
+    "neighborIso2": "TN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MA",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MA",
+    "neighborIso2": "ES",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MC",
+    "neighborIso2": "FR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MD",
+    "neighborIso2": "RO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MD",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ME",
+    "neighborIso2": "AL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ME",
+    "neighborIso2": "BA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ME",
+    "neighborIso2": "HR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ME",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ME",
+    "neighborIso2": "XK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MK",
+    "neighborIso2": "AL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MK",
+    "neighborIso2": "BG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MK",
+    "neighborIso2": "GR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MK",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MK",
+    "neighborIso2": "XK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "CI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "MR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ML",
+    "neighborIso2": "SN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MM",
+    "neighborIso2": "BD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MM",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MM",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MM",
+    "neighborIso2": "LA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MM",
+    "neighborIso2": "TH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MN",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MN",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MR",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MR",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MR",
+    "neighborIso2": "SN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MW",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MW",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MW",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MX",
+    "neighborIso2": "BZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MX",
+    "neighborIso2": "GT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MX",
+    "neighborIso2": "US",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MY",
+    "neighborIso2": "BN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MY",
+    "neighborIso2": "ID",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MY",
+    "neighborIso2": "SG",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "MY",
+    "neighborIso2": "TH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "MW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "SZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "MZ",
+    "neighborIso2": "ZW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NA",
+    "neighborIso2": "AO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NA",
+    "neighborIso2": "BW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NA",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NA",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "BJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "NG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NE",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NG",
+    "neighborIso2": "BJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NG",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NG",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NG",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NI",
+    "neighborIso2": "CR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NI",
+    "neighborIso2": "HN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NL",
+    "neighborIso2": "BE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NL",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NO",
+    "neighborIso2": "FI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NO",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NO",
+    "neighborIso2": "SE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NP",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "NP",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "OM",
+    "neighborIso2": "AE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "OM",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "OM",
+    "neighborIso2": "YE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PA",
+    "neighborIso2": "CO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PA",
+    "neighborIso2": "CR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PE",
+    "neighborIso2": "BO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PE",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PE",
+    "neighborIso2": "CL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PE",
+    "neighborIso2": "CO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PE",
+    "neighborIso2": "EC",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PG",
+    "neighborIso2": "ID",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PK",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PK",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PK",
+    "neighborIso2": "IN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PK",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "BY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "CZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "DE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "LT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "SK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PL",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PS",
+    "neighborIso2": "EG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PS",
+    "neighborIso2": "IL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PS",
+    "neighborIso2": "JO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PT",
+    "neighborIso2": "ES",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PY",
+    "neighborIso2": "AR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PY",
+    "neighborIso2": "BO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "PY",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "QA",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RO",
+    "neighborIso2": "BG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RO",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RO",
+    "neighborIso2": "MD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RO",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RO",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "BA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "BG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "HR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "ME",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "MK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "RO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RS",
+    "neighborIso2": "XK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "AZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "BY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "EE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "FI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "GE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "KP",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "KZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "LT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "LV",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "MN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "NO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RU",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RW",
+    "neighborIso2": "BI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RW",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RW",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "RW",
+    "neighborIso2": "UG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "AE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "BH",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "JO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "KW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "OM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "QA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SA",
+    "neighborIso2": "YE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "EG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "ER",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SD",
+    "neighborIso2": "TD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SE",
+    "neighborIso2": "DK",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "SE",
+    "neighborIso2": "FI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SE",
+    "neighborIso2": "NO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SG",
+    "neighborIso2": "MY",
+    "connectionType": "BRIDGE_TUNNEL"
+  },
+  {
+    "countryIso2": "SI",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SI",
+    "neighborIso2": "HR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SI",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SI",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SK",
+    "neighborIso2": "AT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SK",
+    "neighborIso2": "CZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SK",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SK",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SK",
+    "neighborIso2": "UA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SL",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SL",
+    "neighborIso2": "LR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SM",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SN",
+    "neighborIso2": "GM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SN",
+    "neighborIso2": "GN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SN",
+    "neighborIso2": "GW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SN",
+    "neighborIso2": "ML",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SN",
+    "neighborIso2": "MR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SO",
+    "neighborIso2": "DJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SO",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SO",
+    "neighborIso2": "KE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SR",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SR",
+    "neighborIso2": "GY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "ET",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "KE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SS",
+    "neighborIso2": "UG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SV",
+    "neighborIso2": "GT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SV",
+    "neighborIso2": "HN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SY",
+    "neighborIso2": "IL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SY",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SY",
+    "neighborIso2": "JO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SY",
+    "neighborIso2": "LB",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SY",
+    "neighborIso2": "TR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SZ",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "SZ",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "CF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "CM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "NE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "NG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TD",
+    "neighborIso2": "SD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TG",
+    "neighborIso2": "BF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TG",
+    "neighborIso2": "BJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TG",
+    "neighborIso2": "GH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TH",
+    "neighborIso2": "KH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TH",
+    "neighborIso2": "LA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TH",
+    "neighborIso2": "MM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TH",
+    "neighborIso2": "MY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TJ",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TJ",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TJ",
+    "neighborIso2": "KG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TJ",
+    "neighborIso2": "UZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TL",
+    "neighborIso2": "ID",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TM",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TM",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TM",
+    "neighborIso2": "KZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TM",
+    "neighborIso2": "UZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TN",
+    "neighborIso2": "DZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TN",
+    "neighborIso2": "LY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "AM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "AZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "BG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "GE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "GR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "IQ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "IR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TR",
+    "neighborIso2": "SY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "BI",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "KE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "MW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "RW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "UG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "TZ",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "BY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "HU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "MD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "PL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "RO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "RU",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UA",
+    "neighborIso2": "SK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UG",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UG",
+    "neighborIso2": "KE",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UG",
+    "neighborIso2": "RW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UG",
+    "neighborIso2": "SS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UG",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "US",
+    "neighborIso2": "CA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "US",
+    "neighborIso2": "MX",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UY",
+    "neighborIso2": "AR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UY",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UZ",
+    "neighborIso2": "AF",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UZ",
+    "neighborIso2": "KG",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UZ",
+    "neighborIso2": "KZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UZ",
+    "neighborIso2": "TJ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "UZ",
+    "neighborIso2": "TM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VA",
+    "neighborIso2": "IT",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VE",
+    "neighborIso2": "BR",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VE",
+    "neighborIso2": "CO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VE",
+    "neighborIso2": "GY",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VN",
+    "neighborIso2": "CN",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VN",
+    "neighborIso2": "KH",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "VN",
+    "neighborIso2": "LA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "XK",
+    "neighborIso2": "AL",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "XK",
+    "neighborIso2": "ME",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "XK",
+    "neighborIso2": "MK",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "XK",
+    "neighborIso2": "RS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "YE",
+    "neighborIso2": "OM",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "YE",
+    "neighborIso2": "SA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "BW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "LS",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "NA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "SZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZA",
+    "neighborIso2": "ZW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "AO",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "BW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "CD",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "MW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "NA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "TZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZM",
+    "neighborIso2": "ZW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZW",
+    "neighborIso2": "BW",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZW",
+    "neighborIso2": "MZ",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZW",
+    "neighborIso2": "ZA",
+    "connectionType": "LAND"
+  },
+  {
+    "countryIso2": "ZW",
+    "neighborIso2": "ZM",
+    "connectionType": "LAND"
+  }
+]

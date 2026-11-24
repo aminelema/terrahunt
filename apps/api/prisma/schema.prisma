@@ -1,0 +1,297 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum CountryRegion {
+  EUROPE
+  ASIA
+  AFRICA
+  AMERICAS
+  OCEANIA
+  OTHER
+}
+
+enum ConnectionType {
+  LAND
+  BRIDGE_TUNNEL
+}
+
+enum Direction8 {
+  N
+  NE
+  E
+  SE
+  S
+  SW
+  W
+  NW
+}
+
+enum HeatTier {
+  FOUND
+  BURNING
+  HOT
+  WARM
+  COOL
+  COLD
+  FREEZING
+}
+
+enum GameType {
+  TRUESIZE
+  GEOROUTE
+  TERRAHUNT
+}
+
+enum GameMode {
+  DAILY
+  FREEPLAY
+  BLITZ
+}
+
+enum RegionFilter {
+  WORLD
+  EUROPE
+  ASIA
+  AFRICA
+  AMERICAS
+  OCEANIA
+}
+
+enum SessionStatus {
+  IN_PROGRESS
+  WON
+  COMPLETED
+  LOST_TIMEOUT
+  ABANDONED
+}
+
+enum UserRole {
+  USER
+  ADMIN
+}
+
+model Country {
+  iso2         String        @id @db.Char(2)
+  iso3         String        @unique @db.Char(3)
+  isoNumeric   String?       @map("iso_numeric") @db.Char(3)
+  nameEn       String        @map("name_en") @db.VarChar(120)
+  capital      String?       @db.VarChar(120)
+  region       CountryRegion
+  areaKm2      Float         @map("area_km2")
+  population   BigInt
+  flagEmoji    String        @map("flag_emoji") @db.VarChar(16)
+  isPlayable   Boolean       @default(true) @map("is_playable")
+  isMicrostate Boolean       @default(false) @map("is_microstate")
+  hasPolygon   Boolean       @default(true) @map("has_polygon")
+  labelLat     Float         @map("label_lat")
+  labelLng     Float         @map("label_lng")
+
+  aliases         CountryAlias[]
+  neighborsFrom   CountryNeighbor[] @relation("NeighborFrom")
+  neighborsTo     CountryNeighbor[] @relation("NeighborTo")
+  distancesFrom   CountryDistance[] @relation("DistanceFrom")
+  distancesTo     CountryDistance[] @relation("DistanceTo")
+  trueSizeBases   TrueSizeRound[]   @relation("TrueSizeBase")
+  trueSizeTargets TrueSizeRound[]   @relation("TrueSizeTarget")
+  geoRouteGuesses GeoRouteGuess[]
+  terraGuesses    TerraHuntGuess[]
+
+  @@map("countries")
+}
+
+model CountryAlias {
+  id              Int     @id @default(autoincrement())
+  countryIso2     String  @map("country_iso2") @db.Char(2)
+  alias           String  @db.VarChar(160)
+  aliasNormalized String  @map("alias_normalized") @db.VarChar(160)
+  country         Country @relation(fields: [countryIso2], references: [iso2], onDelete: Cascade)
+
+  @@index([aliasNormalized])
+  @@index([countryIso2])
+  @@map("country_aliases")
+}
+
+model CountryNeighbor {
+  countryIso2    String         @map("country_iso2") @db.Char(2)
+  neighborIso2   String         @map("neighbor_iso2") @db.Char(2)
+  connectionType ConnectionType @default(LAND) @map("connection_type")
+
+  country  Country @relation("NeighborFrom", fields: [countryIso2], references: [iso2], onDelete: Cascade)
+  neighbor Country @relation("NeighborTo", fields: [neighborIso2], references: [iso2], onDelete: Cascade)
+
+  @@id([countryIso2, neighborIso2])
+  @@map("country_neighbors")
+}
+
+model CountryDistance {
+  fromIso2   String      @map("from_iso2") @db.Char(2)
+  toIso2     String      @map("to_iso2") @db.Char(2)
+  distanceKm Int         @map("distance_km")
+  bearingDeg Float?      @map("bearing_deg")
+  direction  Direction8?
+  isNeighbor Boolean     @default(false) @map("is_neighbor")
+
+  fromCountry Country @relation("DistanceFrom", fields: [fromIso2], references: [iso2], onDelete: Cascade)
+  toCountry   Country @relation("DistanceTo", fields: [toIso2], references: [iso2], onDelete: Cascade)
+
+  @@id([fromIso2, toIso2])
+  @@map("country_distances")
+}
+
+model User {
+  id           String   @id @default(uuid()) @db.Uuid
+  email        String   @unique @db.VarChar(255)
+  username     String   @unique @db.VarChar(24)
+  passwordHash String   @map("password_hash")
+  role         UserRole @default(USER)
+  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  refreshTokens RefreshToken[]
+  sessions      GameSession[]
+  stats         UserGameStats[]
+
+  @@map("users")
+}
+
+model RefreshToken {
+  id        String    @id @default(uuid()) @db.Uuid
+  userId    String    @map("user_id") @db.Uuid
+  tokenHash String    @unique @map("token_hash")
+  familyId  String    @map("family_id") @db.Uuid
+  expiresAt DateTime  @map("expires_at") @db.Timestamptz(6)
+  revokedAt DateTime? @map("revoked_at") @db.Timestamptz(6)
+  createdAt DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, familyId])
+  @@map("refresh_tokens")
+}
+
+model DailyChallenge {
+  id              Int      @id @default(autoincrement())
+  gameType        GameType @map("game_type")
+  challengeNumber Int      @map("challenge_number")
+  challengeDate   DateTime @map("challenge_date") @db.Date
+  config          Json
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  sessions GameSession[]
+
+  @@unique([gameType, challengeDate])
+  @@unique([gameType, challengeNumber])
+  @@map("daily_challenges")
+}
+
+model GameSession {
+  id               String        @id @default(uuid()) @db.Uuid
+  userId           String?       @map("user_id") @db.Uuid
+  guestId          String?       @map("guest_id") @db.Uuid
+  isMigrated       Boolean       @default(false) @map("is_migrated")
+  gameType         GameType      @map("game_type")
+  mode             GameMode
+  regionFilter     RegionFilter  @default(WORLD) @map("region_filter")
+  dailyChallengeId Int?          @map("daily_challenge_id")
+  status           SessionStatus @default(IN_PROGRESS)
+  score            Int           @default(0)
+  stepCount        Int           @default(0) @map("step_count")
+  targetData       Json          @map("target_data")
+  startedAt        DateTime      @default(now()) @map("started_at") @db.Timestamptz(6)
+  expiresAt        DateTime?     @map("expires_at") @db.Timestamptz(6)
+  endedAt          DateTime?     @map("ended_at") @db.Timestamptz(6)
+  durationMs       Int?          @map("duration_ms")
+
+  user           User?            @relation(fields: [userId], references: [id], onDelete: SetNull)
+  dailyChallenge DailyChallenge?  @relation(fields: [dailyChallengeId], references: [id], onDelete: Cascade)
+  trueSizeRounds TrueSizeRound[]
+  geoGuesses     GeoRouteGuess[]
+  terraGuesses   TerraHuntGuess[]
+
+  @@unique([userId, dailyChallengeId])
+  @@unique([guestId, dailyChallengeId])
+  @@index([gameType, mode, status, score(sort: Desc), durationMs(sort: Asc)])
+  @@index([guestId])
+  @@index([userId, startedAt(sort: Desc)])
+  @@map("game_sessions")
+}
+
+model TrueSizeRound {
+  sessionId    String    @map("session_id") @db.Uuid
+  roundNumber  Int       @map("round_number")
+  baseIso2     String    @map("base_iso2") @db.Char(2)
+  targetIso2   String    @map("target_iso2") @db.Char(2)
+  trueRatio    Float     @map("true_ratio")
+  guessedRatio Float?    @map("guessed_ratio")
+  score        Int?
+  answeredAt   DateTime? @map("answered_at") @db.Timestamptz(6)
+
+  session       GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  baseCountry   Country     @relation("TrueSizeBase", fields: [baseIso2], references: [iso2])
+  targetCountry Country     @relation("TrueSizeTarget", fields: [targetIso2], references: [iso2])
+
+  @@id([sessionId, roundNumber])
+  @@map("truesize_rounds")
+}
+
+model GeoRouteGuess {
+  id              String   @id @default(uuid()) @db.Uuid
+  sessionId       String   @map("session_id") @db.Uuid
+  guessOrder      Int      @map("guess_order")
+  countryIso2     String   @map("country_iso2") @db.Char(2)
+  isOnOptimalPath Boolean  @default(false) @map("is_on_optimal_path")
+  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  session GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  country Country     @relation(fields: [countryIso2], references: [iso2])
+
+  @@unique([sessionId, countryIso2])
+  @@unique([sessionId, guessOrder])
+  @@map("georoute_guesses")
+}
+
+model TerraHuntGuess {
+  id          String      @id @default(uuid()) @db.Uuid
+  sessionId   String      @map("session_id") @db.Uuid
+  guessOrder  Int         @map("guess_order")
+  countryIso2 String      @map("country_iso2") @db.Char(2)
+  distanceKm  Int         @map("distance_km")
+  bearingDeg  Float?      @map("bearing_deg")
+  direction   Direction8?
+  heatTier    HeatTier    @map("heat_tier")
+  isNeighbor  Boolean     @default(false) @map("is_neighbor")
+  createdAt   DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  session GameSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  country Country     @relation(fields: [countryIso2], references: [iso2])
+
+  @@unique([sessionId, countryIso2])
+  @@unique([sessionId, guessOrder])
+  @@map("terrahunt_guesses")
+}
+
+model UserGameStats {
+  userId        String    @map("user_id") @db.Uuid
+  gameType      GameType  @map("game_type")
+  dailyPlayed   Int       @default(0) @map("daily_played")
+  dailyWon      Int       @default(0) @map("daily_won")
+  currentStreak Int       @default(0) @map("current_streak")
+  maxStreak     Int       @default(0) @map("max_streak")
+  lastDailyDate DateTime? @map("last_daily_date") @db.Date
+  bestScore     Int?      @map("best_score")
+  bestBlitzMs   Int?      @map("best_blitz_ms")
+  totalPlayed   Int       @default(0) @map("total_played")
+  totalWon      Int       @default(0) @map("total_won")
+  updatedAt     DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, gameType])
+  @@map("user_game_stats")
+}
