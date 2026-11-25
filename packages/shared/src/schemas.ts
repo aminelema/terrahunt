@@ -8,14 +8,6 @@ import {
   SessionStatusSchema,
 } from './enums';
 
-export const HealthResponseSchema = z.object({
-  status: z.literal('ok'),
-  database: z.literal('up'),
-  countriesCount: z.number().int(),
-  timestamp: z.string(),
-});
-export type HealthResponse = z.infer<typeof HealthResponseSchema>;
-
 /** Public country item used by the frontend search dropdown. */
 export const CountryOptionSchema = z.object({
   iso2: z.string().length(2),

@@ -7,7 +7,7 @@ import {
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
-import { Prisma, type Country } from '@prisma/client';
+import { Prisma, type Country } from '../../generated/prisma';
 import {
   evaluateGeodleGuess,
   type CountryAttributes,
@@ -91,7 +91,7 @@ export class GeodleService {
     const secretCountryIso2 = await this.pickRandomCountryIso2(excluded);
 
     const maxNum = await this.prisma.dailyChallenge.aggregate({
-      _max: { challengeNumber: true },
+      _max: { challengeNumber: true }, // SELECT MAX(challenge_number) FROM daily_challenges;
     });
     const nextNumber = (maxNum._max.challengeNumber ?? 0) + 1;
 
@@ -234,18 +234,6 @@ export class GeodleService {
       },
     });
     return this.serializeSession(created.id);
-  }
-
-  async getSession(sessionId: string, guestId?: string): Promise<GeodleSession> {
-    const raw = await this.prisma.gameSession.findUnique({
-      where: { id: sessionId },
-      select: { id: true, guestId: true },
-    });
-    if (!raw) {
-      throw new NotFoundException('Game session not found.');
-    }
-    this.assertGuestOwner(raw.guestId, guestId);
-    return this.serializeSession(sessionId);
   }
 
   /**

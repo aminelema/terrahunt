@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { PrismaClient } from '@prisma/client';
+import { PrismaClient } from '../src/generated/prisma';
 import { normalizeSearchText, type CountryRegion } from '@terrahunt/shared';
 
 interface SeedCountry {

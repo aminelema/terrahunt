@@ -1,7 +1,6 @@
 import {
   Body,
   Controller,
-  Get,
   HttpCode,
   HttpStatus,
   Inject,
@@ -11,7 +10,13 @@ import {
   Post,
   Req,
 } from '@nestjs/common';
-import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
+import {
+  ApiBody,
+  ApiOkResponse,
+  ApiOperation,
+  ApiParam,
+  ApiTags,
+} from '@nestjs/swagger';
 import type { GeodleSession } from '@terrahunt/shared';
 import type { Request } from 'express';
 import { StartGeodleGameDto, SubmitGeodleGuessDto } from './geodle.dto';
@@ -25,6 +30,7 @@ export class GeodleController {
   @Post()
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Start a Free Play Geodle game or resume today’s Daily challenge' })
+  @ApiBody({ type: StartGeodleGameDto })
   @ApiOkResponse({ description: 'Geodle game session' })
   async startGame(
     @Body() dto: StartGeodleGameDto,
@@ -33,19 +39,11 @@ export class GeodleController {
     return this.geodleService.startOrResumeSession(dto.mode ?? 'DAILY', req.guestId);
   }
 
-  @Get(':id')
-  @ApiOperation({ summary: 'Fetch current Geodle session state for the owner' })
-  @ApiOkResponse({ description: 'Geodle game session' })
-  async getGame(
-    @Param('id', new ParseUUIDPipe()) id: string,
-    @Req() req: Request,
-  ): Promise<GeodleSession> {
-    return this.geodleService.getSession(id, req.guestId);
-  }
-
   @Post(':id/guess')
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Submit a country guess and receive 6 attribute comparison clues' })
+  @ApiParam({ name: 'id', format: 'uuid', description: 'Geodle game session UUID' })
+  @ApiBody({ type: SubmitGeodleGuessDto })
   @ApiOkResponse({ description: 'Updated Geodle session with evaluated guess' })
   async submitGuess(
     @Param('id', new ParseUUIDPipe()) id: string,
@@ -58,6 +56,7 @@ export class GeodleController {
   @Post(':id/give-up')
   @HttpCode(HttpStatus.OK)
   @ApiOperation({ summary: 'Give up the current game and reveal the secret country' })
+  @ApiParam({ name: 'id', format: 'uuid', description: 'Geodle game session UUID' })
   @ApiOkResponse({ description: 'Ended Geodle session with secretCountry revealed' })
   async giveUp(
     @Param('id', new ParseUUIDPipe()) id: string,

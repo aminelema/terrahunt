@@ -16,7 +16,7 @@
     "dev:api": "pnpm --filter @terrahunt/api dev",
     "dev:web": "pnpm --filter @terrahunt/web dev",
     "build": "pnpm --filter @terrahunt/shared build && pnpm --filter @terrahunt/api build && pnpm --filter @terrahunt/web build",
-    "typecheck": "pnpm --filter @terrahunt/shared typecheck && pnpm --filter @terrahunt/api typecheck && pnpm --filter @terrahunt/web typecheck",
+    "typecheck": "tsc --noEmit -p tsconfig.json && pnpm --filter @terrahunt/shared typecheck && pnpm --filter @terrahunt/api typecheck && pnpm --filter @terrahunt/web typecheck",
     "test": "vitest run scripts/build-geodata.test.ts && pnpm --filter @terrahunt/shared test && pnpm --filter @terrahunt/api test && pnpm --filter @terrahunt/web test"
   },
   "devDependencies": {

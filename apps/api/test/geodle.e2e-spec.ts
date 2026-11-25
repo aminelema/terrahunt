@@ -41,12 +41,6 @@ describe('Geodle API — Integration Tests', () => {
     }
   });
 
-  it('GET /api/v1/health returns database up and 197 countries', async () => {
-    const res = await request(app.getHttpServer()).get('/api/v1/health').expect(200);
-    expect(res.body.status).toBe('ok');
-    expect(res.body.countriesCount).toBe(197);
-  });
-
   it('GET /api/v1/countries returns searchable options with ETag caching and zero secret stats', async () => {
     const res = await request(app.getHttpServer()).get('/api/v1/countries').expect(200);
     expect(res.body.countries).toHaveLength(197);
@@ -73,7 +67,8 @@ describe('Geodle API — Integration Tests', () => {
 
     // Another visitor without this guest cookie gets 403 Forbidden
     await request(app.getHttpServer())
-      .get(`/api/v1/games/geodle/${sessionId}`)
+      .post(`/api/v1/games/geodle/${sessionId}/guess`)
+      .send({ countryIso2: 'DE' })
       .expect(403);
 
     // Look up the actual secret in DB only inside test to pick a wrong guess first, then win
