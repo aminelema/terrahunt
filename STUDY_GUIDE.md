@@ -29,10 +29,9 @@ terrahunt/
     ├── hooks/useGeodleGame.ts          # 12. Custom hook holding game state & API calls
     ├── pages/GeodlePage.tsx            # 13. Clean declarative page layout
     └── components/geodle/
-        ├── ClueSummaryBar.tsx          # 14. Math.min/max narrowed clues bar
-        ├── CountryAutocomplete.tsx     # 15. Searchable EN/DE dropdown (↑/↓/Enter)
-        ├── CountryFlag.tsx             # 16. SVG flag image (fixes missing Windows flag emojis)
-        └── GuessClueRow.tsx            # 17. Renders the 6 Green/Yellow/Red cells
+        ├── CountryAutocomplete.tsx     # 14. Searchable EN/DE dropdown (↑/↓/Enter)
+        ├── CountryFlag.tsx             # 15. SVG flag image (fixes missing Windows flag emojis)
+        └── GuessClueRow.tsx            # 16. Renders the 6 Green/Yellow/Red cells
 
 ---
 
@@ -171,11 +170,7 @@ When an interviewer looks at the live Geodle screen, their eyes go top-to-bottom
 - **Question:** *"Does typing in the input hit PostgreSQL on every keystroke? How does `'osterreich'` match `'Austria'`?"*
 - **Your Answer:** *"No per-keystroke DB load! Because 197 countries is only ~18 KB, `GET /api/v1/countries` loads once on mount with `Cache-Control` + `ETag` (`304 Not Modified` on reloads). English and German names live in `country_aliases`, and `normalizeSearchText()` in `@terrahunt/shared` uses Unicode `NFD` normalization to strip accents/umlauts client-side inside `useMemo`, while filtering out already-guessed countries."*
 
-### E. `NARROWED CLUES` Box (`ASIA`, `2.9M – 9.9M`, `378K – 587K km²`...)
-- **Question:** *"Do you store those narrowed min/max ranges in PostgreSQL?"*
-- **Your Answer:** *"No—storing calculated ranges in the DB would duplicate data and risk going out of sync. It's pure **derived state** in `ClueSummaryBar.tsx` (`deriveDetectiveNotes()`): a 30-line loop over `session.guesses` using `Math.max` and `Math.min` whenever a clue is `'HIGHER'` or `'LOWER'`."*
-
-### F. The 6-Column Clue Rows & Scrollable History
+### E. The 6-Column Clue Rows & Scrollable History
 - **Question 1 (DB Normalization):** *"Do you save the colors (`CLOSE`, `WRONG`) and numbers (`26.3M`) inside `geodle_guesses`?"*
   - **Your Answer:** *"No, `geodle_guesses` is normalized (3NF): it only stores `(session_id, guess_order, guessed_country_iso2)`. Clues are computed via our shared pure function `evaluateGeodleGuess()` by joining `countries` and `country_neighbors`."*
 - **Question 2 (Race Conditions):** *"What happens if a user double-clicks or scripts two concurrent POST requests?"*
@@ -185,6 +180,6 @@ When an interviewer looks at the live Geodle screen, their eyes go top-to-bottom
 - **Question 4 (SVG Flags):** *"Why use `<img>` SVGs in `CountryFlag.tsx` instead of Unicode flag emojis?"*
   - **Your Answer:** *"Windows fonts omit political flag emojis and render two-letter ISO codes (`MG`, `AZ`) instead. Vector `.svg` images render identically on Windows, Linux, and macOS."*
 
-### G. Classic Scaling Follow-Up Question
+### F. Classic Scaling Follow-Up Question
 - **Question:** *"If 100,000 players opened Daily #1 at once, what would you optimize first?"*
 - **Your Answer:** *"Today's `DailyChallenge` + all 197 `Country` rows + `country_neighbors` are tiny (~100 KB) and read-only, so I'd cache them in NestJS memory (or Redis across replicas) so `submitGuess()` only executes the single session lock + `INSERT INTO geodle_guesses` without re-reading static country tables."*

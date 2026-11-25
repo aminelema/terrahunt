@@ -34,7 +34,7 @@ describe('CountryAutocomplete', () => {
       />,
     );
 
-    const input = screen.getByPlaceholderText(/Type a country name/i);
+    const input = screen.getByPlaceholderText(/country name/i);
     fireEvent.focus(input);
     fireEvent.change(input, { target: { value: 'osterreich' } });
 

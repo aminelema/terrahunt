@@ -6,14 +6,35 @@ import type {
 } from '@terrahunt/shared';
 import { CountryFlag } from './CountryFlag';
 
-function getCellColorClasses(status: ClueStatus): string {
+/**
+ * Precision crypto-terminal cell styling:
+ * - Dark obsidian surface instead of playful full-color blocks
+ * - Razor-sharp 2px left status indicator bar + subtle directional wash on MATCH / CLOSE
+ */
+function getTerminalCellClasses(status: ClueStatus): string {
   if (status === 'MATCH') {
-    return 'bg-emerald-600/90 border-emerald-400/60 text-white';
+    return 'bg-gradient-to-r from-emerald-500/[0.14] via-emerald-500/[0.05] to-[#0A0D15]/90 border-emerald-500/35 border-l-2 border-l-emerald-400 text-white shadow-[0_0_20px_-10px_rgba(16,185,129,0.45)]';
   }
   if (status === 'CLOSE') {
-    return 'bg-amber-500/90 border-amber-300/60 text-slate-950 font-semibold';
+    return 'bg-gradient-to-r from-amber-400/[0.13] via-amber-400/[0.04] to-[#0A0D15]/90 border-amber-400/35 border-l-2 border-l-amber-400 text-white';
   }
-  return 'bg-rose-700/85 border-rose-500/50 text-white';
+  return 'bg-[#0A0D15]/85 border-white/[0.07] border-l-2 border-l-rose-500/55 text-slate-300';
+}
+
+function getStatusDotClass(status: ClueStatus): string {
+  if (status === 'MATCH') return 'bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.9)]';
+  if (status === 'CLOSE') return 'bg-amber-400 shadow-[0_0_6px_rgba(251,191,36,0.8)]';
+  return 'bg-rose-500/70';
+}
+
+function getDeltaBadgeClass(status: ClueStatus): string {
+  if (status === 'MATCH') {
+    return 'bg-emerald-400/15 text-emerald-300 border-emerald-400/30';
+  }
+  if (status === 'CLOSE') {
+    return 'bg-amber-400/15 text-amber-300 border-amber-400/30';
+  }
+  return 'bg-rose-500/10 text-rose-300 border-rose-500/20';
 }
 
 function getTrendArrow(trend: NumericTrend): string {
@@ -22,18 +43,18 @@ function getTrendArrow(trend: NumericTrend): string {
   return '';
 }
 
-export function formatCompactPopulation(pop: number): string {
+function formatCompactPopulation(pop: number): string {
   if (pop >= 1_000_000_000) return `${(pop / 1_000_000_000).toFixed(2)}B`;
   if (pop >= 1_000_000) return `${(pop / 1_000_000).toFixed(1)}M`;
   if (pop >= 1_000) return `${Math.round(pop / 1_000)}K`;
   return String(pop);
 }
 
-export function formatCompactArea(km2: number): string {
-  if (km2 >= 1_000_000) return `${(km2 / 1_000_000).toFixed(2)}M km²`;
-  if (km2 >= 10_000) return `${Math.round(km2 / 1_000)}K km²`;
-  if (km2 < 10) return `${km2.toFixed(2)} km²`;
-  return `${Math.round(km2).toLocaleString('en-US')} km²`;
+function formatCompactArea(km2: number): string {
+  if (km2 >= 1_000_000) return `${(km2 / 1_000_000).toFixed(2)}M`;
+  if (km2 >= 10_000) return `${Math.round(km2 / 1_000)}K`;
+  if (km2 < 10) return km2.toFixed(2);
+  return Math.round(km2).toLocaleString('en-US');
 }
 
 const DIRECTION_ARROWS: Record<Direction8, string> = {
@@ -49,107 +70,158 @@ const DIRECTION_ARROWS: Record<Direction8, string> = {
 
 interface GuessClueRowProps {
   guess: GeodleGuessRow;
-  /** Optional custom subtitle under the country name (e.g. "Answer" for the revealed row). */
   subtitleLabel?: string;
 }
 
 /**
- * Renders 1 country row in the 7-column Geodle grid (used for both guesses and the all-green answer row).
+ * Renders 1 country row using sharp, institutional fintech/crypto telemetry cells.
  */
 export function GuessClueRow({ guess, subtitleLabel }: GuessClueRowProps) {
   const { clues } = guess;
 
   const neighborText = guess.isCorrect
-    ? '✓ Target'
+    ? 'Target'
     : clues.neighborOrDirection.isNeighbor
       ? 'Borders!'
       : DIRECTION_ARROWS[clues.neighborOrDirection.direction ?? 'N'];
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-7 gap-2 p-2 sm:p-0 rounded-xl bg-navy-900/60 sm:bg-transparent border border-slate-800 sm:border-none">
-      {/* Country Flag + Name */}
+    <div className="grid grid-cols-2 sm:grid-cols-7 gap-1.5 p-2 sm:p-0 rounded-lg bg-white/[0.015] sm:bg-transparent border border-white/[0.06] sm:border-none">
+      {/* Country Identity Cell */}
       <div
-        className={`col-span-2 sm:col-span-1 px-3 py-2 rounded-xl border flex items-center gap-2.5 min-h-[52px] ${
+        className={`col-span-2 sm:col-span-1 px-3 py-2.5 rounded-md border flex items-center gap-2.5 min-h-[52px] ${
           guess.isCorrect
-            ? 'bg-emerald-700/80 border-emerald-400 text-white'
-            : 'bg-navy-800 border-slate-700'
+            ? 'bg-emerald-500/[0.12] border-emerald-400/45 text-white'
+            : 'bg-[#0C101A]/90 border-white/[0.08] text-slate-100'
         }`}
       >
-        <CountryFlag iso2={guess.countryIso2} />
+        <CountryFlag iso2={guess.countryIso2} className="w-5 h-3.5" />
         <div className="min-w-0">
-          <div className="text-xs font-bold text-white truncate" title={guess.countryName}>
+          <div className="text-xs font-semibold text-white truncate" title={guess.countryName}>
             {guess.countryName}
           </div>
-          <div className="text-[10px] font-mono text-slate-300/80">
-            {subtitleLabel ?? `#${guess.guessOrder}`}
+          <div className="text-[10px] font-mono text-slate-500 truncate">
+            {subtitleLabel ?? `#${String(guess.guessOrder).padStart(2, '0')}`}
           </div>
         </div>
       </div>
 
       {/* 1. Continent */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex flex-col items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex flex-col justify-center min-h-[52px] ${getTerminalCellClasses(
           clues.continent.status,
         )}`}
       >
-        <span className="text-xs font-bold leading-tight">{clues.continent.region}</span>
-        <span className="text-[10px] opacity-85 truncate max-w-full">
+        <div className="flex items-center justify-between gap-1">
+          <span className="text-[11px] font-mono font-semibold tracking-wider">
+            {clues.continent.region}
+          </span>
+          <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${getStatusDotClass(clues.continent.status)}`} />
+        </div>
+        <span className="text-[10px] text-slate-400 truncate mt-0.5">
           {clues.continent.subregion}
         </span>
       </div>
 
       {/* 2. Population */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex items-center justify-between gap-1.5 min-h-[52px] ${getTerminalCellClasses(
           clues.population.status,
         )}`}
       >
-        <span className="text-xs sm:text-sm font-mono font-extrabold">
-          {formatCompactPopulation(clues.population.value)}{' '}
-          {getTrendArrow(clues.population.trend)}
+        <span className="text-xs font-mono font-semibold tabular-nums">
+          {formatCompactPopulation(clues.population.value)}
         </span>
+        {clues.population.trend !== 'EQUAL' ? (
+          <span
+            className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border ${getDeltaBadgeClass(
+              clues.population.status,
+            )}`}
+          >
+            {getTrendArrow(clues.population.trend)}
+          </span>
+        ) : (
+          <span className={`w-1.5 h-1.5 rounded-full ${getStatusDotClass('MATCH')}`} />
+        )}
       </div>
 
       {/* 3. Area */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex items-center justify-between gap-1.5 min-h-[52px] ${getTerminalCellClasses(
           clues.areaKm2.status,
         )}`}
       >
-        <span className="text-xs font-mono font-extrabold">
-          {formatCompactArea(clues.areaKm2.value)} {getTrendArrow(clues.areaKm2.trend)}
-        </span>
+        <div className="min-w-0">
+          <span className="text-xs font-mono font-semibold tabular-nums">
+            {formatCompactArea(clues.areaKm2.value)}
+          </span>
+          <span className="text-[10px] font-mono text-slate-500 ml-1">km²</span>
+        </div>
+        {clues.areaKm2.trend !== 'EQUAL' ? (
+          <span
+            className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border shrink-0 ${getDeltaBadgeClass(
+              clues.areaKm2.status,
+            )}`}
+          >
+            {getTrendArrow(clues.areaKm2.trend)}
+          </span>
+        ) : (
+          <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${getStatusDotClass('MATCH')}`} />
+        )}
       </div>
 
       {/* 4. Landlocked */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex items-center justify-between gap-1.5 min-h-[52px] ${getTerminalCellClasses(
           clues.landlocked.status,
         )}`}
       >
-        <span className="text-xs sm:text-sm font-extrabold">
-          {clues.landlocked.value ? 'Yes' : 'No'}
+        <span className="text-xs font-mono font-semibold">
+          {clues.landlocked.value ? 'Landlocked' : 'Coastal'}
         </span>
+        <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${getStatusDotClass(clues.landlocked.status)}`} />
       </div>
 
       {/* 5. Avg Temp */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex items-center justify-between gap-1.5 min-h-[52px] ${getTerminalCellClasses(
           clues.avgTempC.status,
         )}`}
       >
-        <span className="text-xs sm:text-sm font-mono font-extrabold">
-          {clues.avgTempC.value.toFixed(1)}°C {getTrendArrow(clues.avgTempC.trend)}
+        <span className="text-xs font-mono font-semibold tabular-nums">
+          {clues.avgTempC.value.toFixed(1)}°C
         </span>
+        {clues.avgTempC.trend !== 'EQUAL' ? (
+          <span
+            className={`px-1.5 py-0.5 rounded text-[10px] font-mono font-bold border ${getDeltaBadgeClass(
+              clues.avgTempC.status,
+            )}`}
+          >
+            {getTrendArrow(clues.avgTempC.trend)}
+          </span>
+        ) : (
+          <span className={`w-1.5 h-1.5 rounded-full ${getStatusDotClass('MATCH')}`} />
+        )}
       </div>
 
       {/* 6. Neighbor / Compass */}
       <div
-        className={`px-2 py-1.5 rounded-xl border flex items-center justify-center text-center min-h-[52px] ${getCellColorClasses(
+        className={`px-3 py-2 rounded-md border flex items-center justify-between gap-1.5 min-h-[52px] ${getTerminalCellClasses(
           clues.neighborOrDirection.status,
         )}`}
       >
-        <span className="text-xs font-extrabold">{neighborText}</span>
+        <span
+          className={`px-1.5 py-0.5 rounded text-[11px] font-mono font-semibold border ${getDeltaBadgeClass(
+            clues.neighborOrDirection.status,
+          )}`}
+        >
+          {neighborText}
+        </span>
+        <span
+          className={`w-1.5 h-1.5 rounded-full shrink-0 ${getStatusDotClass(
+            clues.neighborOrDirection.status,
+          )}`}
+        />
       </div>
     </div>
   );
